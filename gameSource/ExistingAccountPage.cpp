@@ -601,15 +601,6 @@ void ExistingAccountPage::draw( doublePair inViewCenter,
                 }   
             }
 
-        
-        pos = mKeyField.getPosition();
-        
-        pos.x = -350;        
-        setDrawColor( 1, 1, 1, 1.0 );
-        mainFont->drawString( s, pos, alignLeft );
-        
-        delete [] key;
-        delete [] s;
         }
     
     }
