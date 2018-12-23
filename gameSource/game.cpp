@@ -281,7 +281,7 @@ const char *getDemoCodeSharedSecret() {
 
 
 const char *getDemoCodeServerURL() {
-    return "http://FIXME/demoServer/server.php";
+    return "http://ohol.club/onelife/demoServer/server.php";
     }
 
 
