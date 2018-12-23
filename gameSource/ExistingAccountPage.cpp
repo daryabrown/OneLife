@@ -73,10 +73,13 @@ ExistingAccountPage::ExistingAccountPage()
                                128 );
     
     
-    if( userEmail != NULL && accountKey != NULL ) {
+    if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
-        mKeyField.setText( accountKey );
         }
+		
+    if( accountKey != NULL ) {
+        mKeyField.setText( accountKey );
+        }		
 
     setButtonStyle( &mLoginButton );
     setButtonStyle( &mFriendsButton );
