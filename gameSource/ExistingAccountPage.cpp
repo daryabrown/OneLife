@@ -601,7 +601,6 @@ void ExistingAccountPage::draw( doublePair inViewCenter,
                 }   
             }
 
-        char *s = autoSprintf( "%s  %s", key );
         
         pos = mKeyField.getPosition();
         
