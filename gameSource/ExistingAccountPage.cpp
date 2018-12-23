@@ -38,14 +38,13 @@ ExistingAccountPage::ExistingAccountPage()
                        // forbid only spaces
                        " " ),
           mKeyField( mainFont, 0, 0, 15, true,
-                     translate( "accountKey" ),
                      // allow only ticket code characters
                      "23456789ABCDEFGHJKLMNPQRSTUVWXYZ-" ),
           mAtSignButton( mainFont, 252, 128, "@" ),
           mPasteButton( mainFont, 0, -80, translate( "paste" ), 'v', 'V' ),
           mDisableCustomServerButton( mainFont, 0, 220, 
                                       translate( "disableCustomServer" ) ),
-          mLoginButton( mainFont, 400, 0, translate( "loginButton" ) ),
+          mLoginButton( mainFont, 0, 0, translate( "loginButton" ) ),
           mFriendsButton( mainFont, 400, -80, translate( "friendsButton" ) ),
           mFamilyTreesButton( mainFont, 400, -160, translate( "familyTrees" ) ),
           mClearAccountButton( mainFont, 400, -280, 
@@ -132,6 +131,7 @@ ExistingAccountPage::ExistingAccountPage()
     mDisableCustomServerButton.addActionListener( this );
 
     mRedetectButton.setVisible( false );
+	mKeyField.setVisible( false );
     mDisableCustomServerButton.setVisible( false );
     
     mAtSignButton.setMouseOverTip( translate( "atSignTip" ) );
