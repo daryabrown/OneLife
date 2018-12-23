@@ -1605,7 +1605,7 @@ void drawFrame( char inUpdate ) {
                     autoLogIn = 
                         SettingsManager::getIntSetting( "autoLogIn", 0 );
 
-                    if( userEmail == NULL || accountKey == NULL ) {
+                    if( userEmail == NULL ) {
                         autoLogIn = false;
                         }
 
