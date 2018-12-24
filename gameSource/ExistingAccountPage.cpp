@@ -216,7 +216,7 @@ void ExistingAccountPage::makeActive( char inFresh ) {
         }
 
 
-    int pastSuccess = SettingsManager::getIntSetting( "loginSuccess", 0 );
+ //   int pastSuccess = SettingsManager::getIntSetting( "loginSuccess", 0 );
 
     char *emailText = mEmailField.getText();
     char *keyText = mKeyField.getText();
