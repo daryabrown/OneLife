@@ -76,8 +76,13 @@ ExistingAccountPage::ExistingAccountPage()
 	SettingsManager::setSetting( "accountKey", "Doesnt" );    
 	mEmailField.setText( "setby@game.com" );
     mKeyField.setText( "Doesnt" );
-    mEmailField.setText( userEmail );
-    mKeyField.setText( accountKey );	
+    if( userEmail != NULL ) {
+        mEmailField.setText( userEmail );
+        }
+		
+    if( accountKey != NULL ) {
+        mKeyField.setText( accountKey );
+        }		
 
     setButtonStyle( &mLoginButton );
     setButtonStyle( &mFriendsButton );
