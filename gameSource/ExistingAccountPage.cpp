@@ -82,9 +82,14 @@ ExistingAccountPage::ExistingAccountPage()
         }
 
 
-    if( mEmailField = "" ) {
+  
+		// mLoginButton.setVisible( false );
+    if( ( strcmp( emailText, "" ) == 0 ) ) {
+
+        mEmailField.focus();
 		mLoginButton.setVisible( false );
-        }			
+        mFamilyTreesButton.setVisible( false );
+        } 			
 
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
