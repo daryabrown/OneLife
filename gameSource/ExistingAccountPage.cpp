@@ -73,10 +73,10 @@ ExistingAccountPage::ExistingAccountPage()
                                128 );
     
 	
-    SettingsManager::setSetting( "email", "setby@game.com" );
+    // SettingsManager::setSetting( "email", "setby@game.com" );
+	// mEmailField.setText( "setby@game.com" );
+	mKeyField.setText( "Doesnt" );
 	SettingsManager::setSetting( "accountKey", "Doesnt" );    
-	mEmailField.setText( "setby@game.com" );
-    mKeyField.setText( "Doesnt" );
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
