@@ -225,7 +225,7 @@ void ExistingAccountPage::makeActive( char inFresh ) {
 
     // don't hide field contents unless there is something to hide
     if( ! pastSuccess || 
-        ( strcmp( emailText, "" ) == 0 ) {
+        ( strcmp( emailText, "" ) == 0 ) ) {
 
         mEmailField.focus();
 		mLoginButton.setVisible( false );
