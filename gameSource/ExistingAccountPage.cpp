@@ -220,7 +220,6 @@ void ExistingAccountPage::makeActive( char inFresh ) {
 
     // don't hide field contents unless there is something to hide
     if( ( strcmp( emailText, "" ) == 0 ) ) {
-
         mEmailField.focus();
 		mLoginButton.setVisible( false );
         mFamilyTreesButton.setVisible( false );
@@ -228,10 +227,10 @@ void ExistingAccountPage::makeActive( char inFresh ) {
     else {
         mEmailField.unfocus();
         mKeyField.unfocus();
-        mLoginButton.setVisible( true );
+        
         mEmailField.setContentsHidden( true );
         mKeyField.setContentsHidden( true );
-         
+        
         char *url = SettingsManager::getStringSetting( "lineageServerURL", "" );
 
         char show = ( strcmp( url, "" ) != 0 )
