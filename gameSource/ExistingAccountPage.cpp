@@ -81,9 +81,6 @@ ExistingAccountPage::ExistingAccountPage()
 		SettingsManager::setSetting( "accountKey", accountKey );  
         }		
 	
-	
-	
-	
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
