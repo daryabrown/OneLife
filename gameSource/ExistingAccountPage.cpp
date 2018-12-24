@@ -1,5 +1,6 @@
 #include "ExistingAccountPage.h"
-#include<iostream>
+#include <iostream>
+
 #include "message.h"
 #include "buttonStyle.h"
 
@@ -14,7 +15,6 @@
 
 
 #include "minorGems/graphics/openGL/KeyboardHandlerGL.h"
-using namespace std;
 
 
 extern Font *mainFont;
@@ -88,25 +88,26 @@ ExistingAccountPage::ExistingAccountPage()
 // if user email null then generate it for them 	
 
 
-int main () 
-{
-srand (time (0));
-    {
-    int number = rand () % 999999999999999 + 1;;
-    int number2 = rand () % 999999999999999 + 1;;
-    std::string text = "ohol";
-    text += std::to_string (number);
-    text += std::string ("player");
-    text += std::to_string (number2);
-    text += std::string ("@mailinator.com");
-    cout << text;
-    }
-}
+
+
 	
     if( userEmail = NULL ) {
 		
 		SettingsManager::setSetting( "email", "setby@game.com" );
         mEmailField.setText( "setby@game.com" );
+		int main () {
+			srand (time (0));
+				{
+				int number = rand () % 999999999999999 + 1;;
+				int number2 = rand () % 999999999999999 + 1;;
+				std::string text = "ohol";
+				text += std::to_string (number);
+				text += std::string ("player");
+				text += std::to_string (number2);
+				text += std::string ("@mailinator.com");
+				cout << text;
+				}
+			}
         }		
 		
 	if( accountKey = NULL ) {
