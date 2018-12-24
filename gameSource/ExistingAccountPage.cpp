@@ -80,12 +80,7 @@ ExistingAccountPage::ExistingAccountPage()
         mKeyField.setText( accountKey );
 		SettingsManager::setSetting( "accountKey", accountKey );  
         }
-
-
-  
-		// mLoginButton.setVisible( false );
- 			
-
+ 
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
@@ -224,8 +219,7 @@ void ExistingAccountPage::makeActive( char inFresh ) {
     char *keyText = mKeyField.getText();
 
     // don't hide field contents unless there is something to hide
-    if( ! pastSuccess || 
-        ( strcmp( emailText, "" ) == 0 ) ) {
+    if( ( strcmp( emailText, "" ) == 0 ) ) {
 
         mEmailField.focus();
 		mLoginButton.setVisible( false );
@@ -234,10 +228,10 @@ void ExistingAccountPage::makeActive( char inFresh ) {
     else {
         mEmailField.unfocus();
         mKeyField.unfocus();
-        
+        mLoginButton.setVisible( true );
         mEmailField.setContentsHidden( true );
         mKeyField.setContentsHidden( true );
-        mLoginButton.setVisible( true );
+        
         char *url = SettingsManager::getStringSetting( "lineageServerURL", "" );
 
         char show = ( strcmp( url, "" ) != 0 )
