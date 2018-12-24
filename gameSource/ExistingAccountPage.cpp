@@ -231,7 +231,7 @@ void ExistingAccountPage::makeActive( char inFresh ) {
         mLoginButton.setVisible( true );
         mEmailField.setContentsHidden( true );
         mKeyField.setContentsHidden( true );
-        
+         
         char *url = SettingsManager::getStringSetting( "lineageServerURL", "" );
 
         char show = ( strcmp( url, "" ) != 0 )
