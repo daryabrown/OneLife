@@ -90,11 +90,14 @@ ExistingAccountPage::ExistingAccountPage()
 //		SettingsManager::setSetting( "email", "setby@game.com" );
 //        mEmailField.setText( "setby@game.com" );
 //        }		
+ 	
 		
-	if( accountKey = NULL ) {
+	if( ( strcmp( accountKey, "" ) == 0 ) ) {
 		mKeyField.setText( "SetByGame" );
-		SettingsManager::setSetting( "accountKey", "SetByGame" );    
-        }		
+		SettingsManager::setSetting( "accountKey", "SetByGame" ); 
+        }	
+		
+		
 
     setButtonStyle( &mLoginButton );
     setButtonStyle( &mFriendsButton );
@@ -220,8 +223,9 @@ void ExistingAccountPage::makeActive( char inFresh ) {
 
     // don't hide field contents unless there is something to hide
     if( ( strcmp( emailText, "" ) == 0 ) ) {
+
         mEmailField.focus();
-		mLoginButton.setVisible( false );
+
         mFamilyTreesButton.setVisible( false );
         }
     else {
