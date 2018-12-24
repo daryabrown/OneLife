@@ -75,14 +75,19 @@ ExistingAccountPage::ExistingAccountPage()
 	
     // SettingsManager::setSetting( "email", "setby@game.com" );
 	// mEmailField.setText( "setby@game.com" );
-	mKeyField.setText( "Doesnt" );
-	SettingsManager::setSetting( "accountKey", "Doesnt" );    
+	mKeyField.setText( "SetByGame" );
+	
+	if( accountKey = NULL ) {
+		SettingsManager::setSetting( "accountKey", "Doesnt" );    
+        }		
+	
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
 		
     if( accountKey != NULL ) {
         mKeyField.setText( accountKey );
+		SettingsManager::setSetting( "accountKey", accountKey );  
         }		
 
     setButtonStyle( &mLoginButton );
@@ -571,16 +576,6 @@ void ExistingAccountPage::draw( doublePair inViewCenter,
             steamSuffixPointer[0] ='\0';
             transString = "steamID";
             coverChar = 'X';
-            }
-
-        if( mHideAccount ) {
-            int len = strlen( email );
-            for( int i=0; i<len; i++ ) {
-                if( email[i] != '@' &&
-                    email[i] != '.' ) {
-                    email[i] = coverChar;
-                    }
-                }   
             }
         
 
