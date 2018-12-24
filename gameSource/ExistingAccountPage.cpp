@@ -72,6 +72,7 @@ ExistingAccountPage::ExistingAccountPage()
     mAtSignButton.setPosition( mEmailField.getRightEdgeX() + 48,
                                128 );
     
+	
     SettingsManager::setSetting( "email", "setby@game.com" );
 	SettingsManager::setSetting( "accountKey", "Doesnt" );    
 	mEmailField.setText( "setby@game.com" );
@@ -261,7 +262,7 @@ void ExistingAccountPage::makeActive( char inFresh ) {
             
             mClearAccountButton.setVisible( false );
             
-            mViewAccountButton.setVisible( true );
+            mViewAccountButton.setVisible( false );
             mHideAccount = true;
             }
         else {
