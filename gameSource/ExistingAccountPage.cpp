@@ -75,19 +75,22 @@ ExistingAccountPage::ExistingAccountPage()
 	
     // SettingsManager::setSetting( "email", "setby@game.com" );
 	// mEmailField.setText( "setby@game.com" );
-	mKeyField.setText( "SetByGame" );
 	
-	if( accountKey = NULL ) {
-		SettingsManager::setSetting( "accountKey", "Doesnt" );    
+    if( accountKey != NULL ) {
+        mKeyField.setText( accountKey );
+		SettingsManager::setSetting( "accountKey", accountKey );  
         }		
+	
+	
+	
 	
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
 		
-    if( accountKey != NULL ) {
-        mKeyField.setText( accountKey );
-		SettingsManager::setSetting( "accountKey", accountKey );  
+	if( accountKey = NULL ) {
+		mKeyField.setText( "SetByGame" );
+		SettingsManager::setSetting( "accountKey", "Doesnt" );    
         }		
 
     setButtonStyle( &mLoginButton );
