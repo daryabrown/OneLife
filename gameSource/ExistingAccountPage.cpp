@@ -15,7 +15,7 @@
 
 
 #include "minorGems/graphics/openGL/KeyboardHandlerGL.h"
-
+using namespace std;
 
 extern Font *mainFont;
 
@@ -87,7 +87,8 @@ ExistingAccountPage::ExistingAccountPage()
         }
 // if user email null then generate it for them 	
 
- 
+
+void () {
 srand (time (0));
     {
     int number = rand () % 999999999999999 + 1;;
@@ -99,7 +100,7 @@ srand (time (0));
     text += std::string ("@mailinator.com");
     cout << text;
     }
- 
+}
 
 	
     if( userEmail = NULL ) {
