@@ -72,8 +72,8 @@ ExistingAccountPage::ExistingAccountPage()
     mAtSignButton.setPosition( mEmailField.getRightEdgeX() + 48,
                                128 );
     
-    SettingsManager::setSetting( "email", "setby@game.com" )
-	SettingsManager::setSetting( "accountKey", "Doesnt" )    
+    SettingsManager::setSetting( "email", "setby@game.com" );
+	SettingsManager::setSetting( "accountKey", "Doesnt" );    
     if( userEmail != NULL ) {
         mEmailField.setText( userEmail );
         }
